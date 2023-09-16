@@ -1,0 +1,43 @@
+form input::file-selector-button {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    overflow: auto;
+  }
+  p {
+    margin-top: 1%;
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 2.5vw;
+    font-weight: bold;
+  }
+
+  .imageContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .uploadImage {
+    width: 50%;
+    height: 40vh;
+    border: 5px solid #ccc;
+    border-radius: 20px;
+    padding: 5rem 5rem;
+    margin: 5% auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  p {
+    text-align: center;
+    font-size: 9vw;
+    font-weight: bold;
+  }
+
+  .uploadImage {
+    border: 5px solid #ccc;
+    border-radius: 6px;
+    padding: 5rem 5rem;
+  }
+}
