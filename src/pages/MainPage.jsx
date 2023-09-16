@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../assets/pages/mainpage.css";
+import "../assets/pages/mainPage.css";
 
 const MainPage = () => {
   return (
