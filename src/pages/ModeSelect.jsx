@@ -18,7 +18,7 @@ const ModeSelect = () => {
         <div class="card card1">
           <Link to="/normal">
             <div class="card_image">
-              <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+              <img src="standard.png" />
             </div>
             <div class="card_title title-white">
               <p>Standard</p>

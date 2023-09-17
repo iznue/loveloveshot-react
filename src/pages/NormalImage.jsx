@@ -1,8 +1,8 @@
 import React, { useState, useRef } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { useDropzone } from "react-dropzone";
-import ImageUpload from "../component/ImageUpload";
+// import { useDropzone } from "react-dropzone";
+// import ImageUpload from "../component/ImageUpload";
 import "../assets/pages/normalImage.css";
 
 const NormalImage = () => {
@@ -12,7 +12,7 @@ const NormalImage = () => {
   const maleImgRef = useRef();
   const femaleImgRef = useRef();
   const navigate = useNavigate();
-  const springURL = "http://localhost:8080/api/v1/singleImage";
+  const springURL = "http://192.168.0.159:8080/api/v1/singleImage";
 
   const handleImageChange = (ref, setImageState) => {
     const file = ref.current.files[0];
@@ -52,22 +52,15 @@ const NormalImage = () => {
       let formdata = new FormData();
       formdata.append("maleSingleImage", maleFile);
       formdata.append("femaleSingleImage", femaleFile);
-      // formdata.append(
-      //   "maleSingleImage",
-      //   document.singleImageForm.maleSingleImage.files[0]
-      // );
-      // formdata.append(
-      //   "femaleSingleImage",
-      //   document.singleImageForm.femaleSingleImage.files[0]
-      // );
 
       axios
         .post(springURL, formdata)
         .then(function (resp) {
           console.log(resp);
+          console.log(resp.data.data);
           navigate("/normalResult", {
             state: {
-              result: resp.data.aiImage,
+              result: resp.data.data.aiImage,
             },
           });
         })
@@ -97,14 +90,22 @@ const NormalImage = () => {
               onChange={() => handleImageChange(maleImgRef, setMaleImage)}
               ref={maleImgRef}
             />
-            <label for="male">
+            {/* <label for="male">
               <div className="btn-upload">남성 사진 업로드</div>
-            </label>
-            <img
-              className="maleImage"
-              src={maleImage}
-              onClick={() => maleImgRef.current.click()}
-            />
+            </label> */}
+            {maleImage === null ? (
+              <img
+                className="maleImage"
+                src="man.png"
+                onClick={() => maleImgRef.current.click()}
+              />
+            ) : (
+              <img
+                className="maleImage"
+                src={maleImage}
+                onClick={() => maleImgRef.current.click()}
+              />
+            )}
           </div>
           <div className="femaleImageBox">
             <input
@@ -115,6 +116,19 @@ const NormalImage = () => {
               onChange={() => handleImageChange(femaleImgRef, setFemaleImage)}
               ref={femaleImgRef}
             />
+            {femaleImage === null ? (
+              <img
+                className="femaleImage"
+                src="girl.png"
+                onClick={() => maleImgRef.current.click()}
+              />
+            ) : (
+              <img
+                className="femaleImage"
+                src={femaleImage}
+                onClick={() => maleImgRef.current.click()}
+              />
+            )}
             <img
               className="femaleImage"
               src={femaleImage}
@@ -122,14 +136,16 @@ const NormalImage = () => {
             />
           </div>
         </div>
-        <div className="content-3d">
-          <input
-            type="submit"
-            value="결과 보기"
-            className="btn-3d yellow"
-            disabled={disabled}
-          />
-        </div>
+        <center>
+          <div className="normalImage_btnBox">
+            <input
+              type="submit"
+              value="결과 보기"
+              className="btn normalImage__btn"
+              disabled={disabled}
+            />
+          </div>
+        </center>
       </form>
     </>
   );

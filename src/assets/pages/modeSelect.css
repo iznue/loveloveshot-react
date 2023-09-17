@@ -7,6 +7,10 @@
   --card-image-height: 100%;
 } */
 @media screen and (min-width: 768px) {
+  a {
+    color: white;
+    text-decoration: none;
+  }
   .cards-list {
     display: flex;
     justify-content: space-around;
@@ -70,6 +74,10 @@
 }
 
 @media screen and (max-width: 768px) {
+  a {
+    color: white;
+    text-decoration: none;
+  }
   .card-list {
     flex-direction: column;
     flex-wrap: wrap;
@@ -112,6 +120,8 @@
     font-weight: bold;
     font-size: 8vw;
     margin-top: -40%;
+    text-decoration: none;
+    list-style: none;
   }
   /* .card1:hover ~ .card2,
   .card2:hover ~ .card1 {

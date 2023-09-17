@@ -6,23 +6,25 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   const Header = styled.div`
-    max-width: 100%;
+    width: 100%;
     height: 7vh;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: white;
-    background-color: black;
+    background-color: #2ee59d;
 
     a {
       color: white;
       text-decoration: none;
     }
     #main_logo {
+      margin: 5% auto;
       display: flex;
       justify-content: center;
-      width: 40px;
+      width: 70px;
+      height: 70px;
     }
 
     .logo {
@@ -67,20 +69,19 @@ const Header = () => {
 
     @media screen and (max-width: 768px) {
       flex-wrap: wrap;
-      height: 10vh;
-
+      height: 11vh;
       .header_right {
         display: ${(props) => (props.userToggleOpen ? "flex" : "none")};
         flex-direction: column;
         width: 100%;
-        background-color: black;
+        background-color: #2ee59d;
       }
 
       .header_menulist {
         display: ${(props) => (props.isToggleOpen ? "flex" : "none")};
         flex-direction: column;
         width: 100%;
-        background-color: black;
+        background-color: #2ee59d;
       }
 
       .header_menulist li,
@@ -108,6 +109,9 @@ const Header = () => {
         className="toggle"
         onClick={() => {
           setIsToggleOpen(!isToggleOpen);
+          if (userToggleOpen) {
+            setUserToggleOpen(false);
+          }
         }}
       >
         <FontAwesomeIcon icon={!isToggleOpen ? faBars : faTimes} />
@@ -125,6 +129,9 @@ const Header = () => {
         className="user"
         onClick={() => {
           setUserToggleOpen(!userToggleOpen);
+          if (isToggleOpen) {
+            setIsToggleOpen(false);
+          }
         }}
       >
         <FontAwesomeIcon icon={!userToggleOpen ? faUser : faTimes} />
