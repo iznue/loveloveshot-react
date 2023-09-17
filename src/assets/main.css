@@ -1,5 +1,7 @@
 /* 모든 페이지에 적용되는 css 작성 */
+@import url("./component/button-3d.css");
 
 body {
   background-color: beige;
+  font-family: "Lato", sans-serif;
 }
