@@ -9,7 +9,7 @@ const ModeSelect = () => {
       window.location.replace("/premium");
     }
     if (!loginData) {
-      alert("로그인 후 이용해주세요");
+      alert("준비중인 서비스입니다.");
     }
   };
   return (
@@ -21,7 +21,7 @@ const ModeSelect = () => {
               <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
             </div>
             <div class="card_title title-white">
-              <p>일반 편집</p>
+              <p>Standard</p>
             </div>
           </Link>
         </div>
@@ -31,7 +31,7 @@ const ModeSelect = () => {
             <img src="https://media.giphy.com/media/10SvWCbt1ytWCc/giphy.gif" />
           </div>
           <div class="card_title title-white">
-            <p>프리미엄 편집</p>
+            <p>Premium</p>
           </div>
         </div>
       </div>

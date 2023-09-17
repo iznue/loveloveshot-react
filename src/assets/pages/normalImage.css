@@ -1,6 +1,6 @@
-form input::file-selector-button {
+/* form input::file-selector-button {
   display: none;
-}
+} */
 
 @media screen and (min-width: 768px) {
   body {
@@ -10,21 +10,59 @@ form input::file-selector-button {
     margin-top: 1%;
     margin-bottom: 0;
     text-align: center;
-    font-size: 2.5vw;
+    font-size: 3vw;
     font-weight: bold;
   }
 
   .imageContainer {
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
-  .uploadImage {
+
+  .femaleImageBox,
+  .maleImageBox {
     width: 50%;
     height: 40vh;
+    display: flex;
     border: 5px solid #ccc;
     border-radius: 20px;
     padding: 5rem 5rem;
     margin: 5% auto;
+  }
+  .uploadImage {
+    display: none;
+    margin: 0;
+    /* width: 50%;
+    height: 40vh;
+    display: flex;
+    border: 5px solid #ccc;
+    border-radius: 20px;
+    padding: 5rem 5rem;
+    margin: 5% auto; */
+  }
+
+  .btn-upload {
+    width: 150px;
+    height: 30px;
+    background: #fff;
+    border: 1px solid rgb(77, 77, 77);
+    border-radius: 10px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .btn-upload:hover {
+    background: rgb(77, 77, 77);
+    color: #fff;
+  }
+
+  img {
+    width: 100%;
+    object-fit: cover;
   }
 }
 

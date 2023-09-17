@@ -1,5 +1,8 @@
 import React, { useState, useRef } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import { useDropzone } from "react-dropzone";
+import ImageUpload from "../component/ImageUpload";
 import "../assets/pages/normalImage.css";
 
 const NormalImage = () => {
@@ -8,13 +11,13 @@ const NormalImage = () => {
   const [femaleImage, setFemaleImage] = useState(null);
   const maleImgRef = useRef();
   const femaleImgRef = useRef();
+  const navigate = useNavigate();
   const springURL = "http://localhost:8080/api/v1/singleImage";
-  const maleImageInput = document.querySelector(".uploadImage.male");
-  const femaleImageInput = document.querySelector(".uploadImage.female");
 
   const handleImageChange = (ref, setImageState) => {
     const file = ref.current.files[0];
     if (!file) {
+      setImageState(null);
       return;
     }
     if (file) {
@@ -29,41 +32,55 @@ const NormalImage = () => {
   const handleSubmit = async (event) => {
     setDisabled(true);
     event.preventDefault();
-    if (!maleImageInput.files.length) {
-      setDisabled(true);
-      event.preventDefault();
-      alert("남성분 사진을 업로드해주세요");
-    }
-    if (!femaleImageInput.files.length) {
-      setDisabled(true);
-      event.preventDefault();
-      alert("여성분 사진을 업로드해주세요");
-    }
 
-    let formdata = new FormData();
-    formdata.append(
-      "maleSingleImage",
-      document.singleImageForm.maleSingleImage.files[0]
-    );
-    formdata.append(
-      "femaleSingleImage",
-      document.singleImageForm.femaleSingleImage.files[0]
-    );
+    const maleFile = maleImgRef.current.files[0];
+    const femaleFile = femaleImgRef.current.files[0];
 
-    axios
-      .post(springURL, formdata)
-      .then(function (resp) {
-        console.log(resp);
-      })
-      .catch(function (err) {
-        alert(err);
-      });
-    await new Promise((r) => setTimeout(r, 2000));
-    setDisabled(false);
+    if (!maleFile && !femaleFile) {
+      alert("사진을 업로드 해주세요!");
+      setDisabled(false);
+      return;
+    } else if (!maleFile) {
+      setDisabled(false);
+      alert("남성분 사진을 업로드해주세요.");
+      return;
+    } else if (!femaleFile) {
+      setDisabled(false);
+      alert("여성분 사진을 업로드해주세요.");
+      return;
+    } else {
+      let formdata = new FormData();
+      formdata.append("maleSingleImage", maleFile);
+      formdata.append("femaleSingleImage", femaleFile);
+      // formdata.append(
+      //   "maleSingleImage",
+      //   document.singleImageForm.maleSingleImage.files[0]
+      // );
+      // formdata.append(
+      //   "femaleSingleImage",
+      //   document.singleImageForm.femaleSingleImage.files[0]
+      // );
+
+      axios
+        .post(springURL, formdata)
+        .then(function (resp) {
+          console.log(resp);
+          navigate("/normalResult", {
+            state: {
+              result: resp.data.aiImage,
+            },
+          });
+        })
+        .catch(function (err) {
+          alert(err);
+        });
+      await new Promise((r) => setTimeout(r, 2000));
+      setDisabled(false);
+    }
   };
   return (
     <>
-      <p>기본 사진 업로드</p>
+      <p>Standard</p>
       <form
         name="singleImageForm"
         encType="multipart/form-data"
@@ -73,13 +90,21 @@ const NormalImage = () => {
           <div className="maleImageBox">
             <input
               type="file"
+              id="male"
               name="maleSingleImage"
               accept="image/*"
-              className="uploadImage female"
+              className="uploadImage"
               onChange={() => handleImageChange(maleImgRef, setMaleImage)}
               ref={maleImgRef}
             />
-            <img className="maleImage" src={maleImage} />
+            <label for="male">
+              <div className="btn-upload">남성 사진 업로드</div>
+            </label>
+            <img
+              className="maleImage"
+              src={maleImage}
+              onClick={() => maleImgRef.current.click()}
+            />
           </div>
           <div className="femaleImageBox">
             <input
@@ -90,7 +115,11 @@ const NormalImage = () => {
               onChange={() => handleImageChange(femaleImgRef, setFemaleImage)}
               ref={femaleImgRef}
             />
-            <img className="femaleImage" src={femaleImage} />
+            <img
+              className="femaleImage"
+              src={femaleImage}
+              onClick={() => femaleImgRef.current.click()}
+            />
           </div>
         </div>
         <div className="content-3d">
