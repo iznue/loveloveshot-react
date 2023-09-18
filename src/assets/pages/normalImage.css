@@ -20,14 +20,20 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .imageBoxWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+  }
+
   .femaleImageBox,
   .maleImageBox {
     width: 60%;
-    height: 55vh;
+    height: 60vh;
     display: flex;
     border: 7px solid #2ee59d;
     border-radius: 30px;
-    margin: 5% auto;
+    margin: 3% auto;
   }
   .uploadImage {
     display: none;
@@ -40,7 +46,6 @@
     width: 150px;
     height: 30px;
     background: #fff;
-
     border-radius: 10px;
     font-weight: 500;
     cursor: pointer;
@@ -62,6 +67,16 @@
     display: flex;
     text-align: center;
     margin: 10% auto;
+  }
+
+  .normalImage_title {
+    color:white;
+    text-align: center;
+    border-radius: 0px 0px 10% 10%;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 2vw;
+    margin-top: -15%;
   }
 }
 
@@ -108,6 +123,9 @@
     overflow: hidden;
   }
 
+  .normalImage_btnBox {
+    margin-top: 10% auto;
+  }
   .btn-upload {
     width: 150px;
     height: 30px;
@@ -132,10 +150,20 @@
   .normalImage__btnBox {
     display: flex;
     text-align: center;
-    margin: 10% auto;
+    margin: 15% auto;
   }
 
   .normalImage__btn {
     margin-bottom: 5%;
+  }
+
+  .normalImage_title {
+    color:white;
+    text-align: center;
+    border-radius: 0px 0px 10% 10%;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 2vw;
+    margin-top: -25%;
   }
 }

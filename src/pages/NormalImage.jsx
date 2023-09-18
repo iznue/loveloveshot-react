@@ -12,7 +12,7 @@ const NormalImage = () => {
   const maleImgRef = useRef();
   const femaleImgRef = useRef();
   const navigate = useNavigate();
-  const springURL = "http://192.168.0.159:8080/api/v1/singleImage";
+  const springURL = "http://192.168.0.21:8080/api/v1/singleImage";
 
   const handleImageChange = (ref, setImageState) => {
     const file = ref.current.files[0];
@@ -80,6 +80,7 @@ const NormalImage = () => {
         onSubmit={handleSubmit}
       >
         <div className="imageContainer">
+        <div className="imageBoxWrapper">
           <div className="maleImageBox">
             <input
               type="file"
@@ -107,6 +108,11 @@ const NormalImage = () => {
               />
             )}
           </div>
+          <div class="normalImage_title">
+            <p>Man</p>
+          </div>
+          </div>
+          <div className="imageBoxWrapper">
           <div className="femaleImageBox">
             <input
               type="file"
@@ -120,20 +126,19 @@ const NormalImage = () => {
               <img
                 className="femaleImage"
                 src="girl.png"
-                onClick={() => maleImgRef.current.click()}
+                onClick={() => femaleImgRef.current.click()}
               />
             ) : (
               <img
                 className="femaleImage"
                 src={femaleImage}
-                onClick={() => maleImgRef.current.click()}
+                onClick={() => femaleImgRef.current.click()}
               />
             )}
-            <img
-              className="femaleImage"
-              src={femaleImage}
-              onClick={() => femaleImgRef.current.click()}
-            />
+          </div>
+          <div class="normalImage_title">
+            <p>Woman</p>
+          </div>
           </div>
         </div>
         <center>
