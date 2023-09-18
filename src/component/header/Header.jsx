@@ -74,14 +74,14 @@ const Header = () => {
         display: ${(props) => (props.userToggleOpen ? "flex" : "none")};
         flex-direction: column;
         width: 100%;
-        background-color: #2ee59d;
+        background-color: #0E0E0D;
       }
 
       .header_menulist {
         display: ${(props) => (props.isToggleOpen ? "flex" : "none")};
         flex-direction: column;
         width: 100%;
-        background-color: #2ee59d;
+        background-color: #0E0E0D;
       }
 
       .header_menulist li,
