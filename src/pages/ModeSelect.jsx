@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import "../assets/pages/modeSelect.css";
 
 const ModeSelect = () => {
-
   const loginData = JSON.parse(localStorage.getItem("login"));
   const checkLogin = () => {
     if (loginData) {
@@ -18,10 +17,9 @@ const ModeSelect = () => {
     <>
       <div class="cards-list">
         <div class="card card1">
-
           <Link to="/normal">
             <div class="card_image">
-              <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+              <img src="standard.png" />
             </div>
             <div class="card_title title-white">
               <p>Standard</p>

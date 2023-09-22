@@ -1,25 +1,31 @@
 import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import "../assets/pages/normalImageResult.css";
+
 
 const NormalImageResult = () => {
   const location = useLocation();
   const [resultImage, setResultImage] = useState();
   const navigate = useNavigate();
+  const serverURL = "http://192.168.0.21:8080";
 
   useEffect(() => {
     if (!location || !location.state || !location.state.result) {
       alert("잘못된 접근입니다.");
       navigate("/normal");
     }
-  }, [location]);
+  }, [location, navigate]); // navigate를 의존성 배열에 추가
 
-  if (location) {
-    setResultImage(location.state.result);
-  }
+  useEffect(() => {
+    if (location) {
+      setResultImage(serverURL + location.state.result);
+    }
+  }, [location]);
+  console.log(resultImage);
 
   return (
-    <div>
-      <img src={resultImage} />
+    <div className="result__box">
+      <img src={resultImage} className="result_image" />
     </div>
   );
 };
