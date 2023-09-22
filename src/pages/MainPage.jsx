@@ -5,9 +5,10 @@ import "../assets/pages/mainPage.css";
 const MainPage = () => {
   return (
     <>
-      <div>
-        <div className="content-3d">
-          <Link to="/modeSelect" className="btn-3d yellow">
+      {/* <img src="background.gif" className="background" /> */}
+      <div className="mainContainer">
+        <div className="btnBox main__btnBox">
+          <Link to="/modeSelect" className="btn main__btn">
             사진 생성
           </Link>
         </div>
