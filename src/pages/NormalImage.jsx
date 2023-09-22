@@ -67,7 +67,7 @@ const NormalImage = () => {
           console.log(resp);
           navigate("/normalResult", {
             state: {
-              result: resp.data.aiImage,
+              result: resp.data.data,
             },
           });
         })
