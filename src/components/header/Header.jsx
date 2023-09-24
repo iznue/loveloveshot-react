@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, Component } from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faUser, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header = ({ edit, setEdit }) => {
   const Header = styled.div`
     width: 100%;
     height: 7vh;
@@ -74,14 +74,14 @@ const Header = () => {
         display: ${(props) => (props.userToggleOpen ? "flex" : "none")};
         flex-direction: column;
         width: 100%;
-        background-color: #0E0E0D;
+        background-color: #0e0e0d;
       }
 
       .header_menulist {
         display: ${(props) => (props.isToggleOpen ? "flex" : "none")};
         flex-direction: column;
         width: 100%;
-        background-color: #0E0E0D;
+        background-color: #0e0e0d;
       }
 
       .header_menulist li,
@@ -102,6 +102,85 @@ const Header = () => {
 
   const [isToggleOpen, setIsToggleOpen] = useState(false);
   const [userToggleOpen, setUserToggleOpen] = useState(false);
+  const [isLogin, setIsLogin] = useState(false);
+
+  let loginInfo = localStorage.getItem("jwt");
+
+  useEffect(() => {
+    if (loginInfo) {
+      setIsLogin(true);
+    }
+    if (!loginInfo) {
+      setIsLogin(false);
+    }
+  }, []);
+  const handleLogOut = () => {
+    localStorage.removeItem("jwt");
+    setIsLogin(false);
+  };
+
+  if (isLogin === false) {
+    return (
+      <Header isToggleOpen={isToggleOpen} userToggleOpen={userToggleOpen}>
+        <div
+          className="toggle"
+          onClick={() => {
+            setIsToggleOpen(!isToggleOpen);
+            if (userToggleOpen) {
+              setUserToggleOpen(false);
+            }
+          }}
+        >
+          <FontAwesomeIcon icon={!isToggleOpen ? faBars : faTimes} />
+        </div>
+
+        {/* Logo */}
+        <div className="logo">
+          <Link to="/">
+            <img src="loveloveshot_logo.png" id="main_logo" />
+          </Link>
+        </div>
+
+        {/* User 버튼 */}
+        <div
+          className="user"
+          onClick={() => {
+            setUserToggleOpen(!userToggleOpen);
+            if (isToggleOpen) {
+              setIsToggleOpen(false);
+            }
+          }}
+        >
+          <FontAwesomeIcon icon={!userToggleOpen ? faUser : faTimes} />
+        </div>
+
+        {/* 메뉴 리스트 */}
+        <ul className="header_menulist">
+          <li>
+            <Link to="/">홈페이지</Link>
+          </li>
+          <li>
+            <Link to="/modeSelect">사진 생성</Link>
+          </li>
+        </ul>
+
+        {/* User 메뉴 리스트 */}
+        <ul className="header_right">
+          <li>
+            <button type="button" onClick={() => setEdit(!edit)}>
+              Login
+            </button>
+            <Link to="http://localhost:8080/oauth2/authorization/naver?redirect_uri=http://localhost:3000/oauth2/redirect">
+              네이버
+            </Link>
+            <Link to="http://localhost:8080/oauth2/authorization/kakao?redirect_uri=http://localhost:3000/oauth2/redirect">
+              카카오
+            </Link>
+          </li>
+        </ul>
+      </Header>
+    );
+  }
 
   return (
     <Header isToggleOpen={isToggleOpen} userToggleOpen={userToggleOpen}>
@@ -150,7 +229,9 @@ const Header = () => {
       {/* User 메뉴 리스트 */}
       <ul className="header_right">
         <li>
-          <Link to="/modeSelect">Login</Link>
+          <button type="button" onClick={handleLogOut}>
+            LogOut
+          </button>
         </li>
       </ul>
     </Header>
