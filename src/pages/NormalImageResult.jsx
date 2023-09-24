@@ -24,7 +24,7 @@ const NormalImageResult = () => {
 
   return (
     <div className="result__box">
-      <img src={resultImage} className="result_image" />
+      <img src={resultImage} alt="" className="result_image" />
     </div>
   );
 };
