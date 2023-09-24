@@ -1,9 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import Header from "./component/header/Header";
-import MainPage from "./pages/MainPage";
-import ModeSelect from "./pages/ModeSelect";
-import NormalImage from "./pages/NormalImage";
-import NormalImageResult from "./pages/NormalImageResult";
+import MainPage from "./pages/mainpage/MainPage";
+import ModeSelect from "./pages/modeselect/ModeSelect";
+import NormalImage from "./pages/normalimage/NormalImage";
+import NormalImageResult from "./pages/normalimageresult/NormalImageResult";
 import PremiumImage from "./pages/PremiumImage";
 import NotFound from "./pages/NotFound";
 import Layout from "./layouts/Layouts";

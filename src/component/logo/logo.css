@@ -1,0 +1,39 @@
+.logo {
+  height: 26px;
+  width: 228px;
+}
+
+.logo .overlap-group-2 {
+  height: 27px;
+  position: relative;
+  top: -1px;
+}
+
+.logo .text-wrapper-3 {
+  color: #ac59ff;
+  font-family: "Nico Moji-Regular", Helvetica;
+  font-size: 24px;
+  font-weight: 400;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+}
+
+.logo .undertale-heart {
+  height: 21px;
+  left: 105px;
+  position: absolute;
+  top: 6px;
+  width: 21px;
+}
+
+.logo .undertale-heart-2 {
+  height: 21px;
+  left: 34px;
+  position: absolute;
+  top: 6px;
+  width: 21px;
+}
