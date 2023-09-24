@@ -1,34 +1,24 @@
-import style from "../../assets/component/login-modal.css";
-function LoginModal({ edit, setEdit }) {
+import React from "react";
+import "./login-modal.css";
+function LoginModal({ className, edit, setEdit }) {
   const clickDisplay = () => {
     setEdit(!edit);
   };
   return (
-    <>
-      <div className={style.myPageModal}>
-        <div
-          className={edit ? `${style.myPageModalBack}` : "none"}
-          onClick={clickDisplay}
-        ></div>
-        <div className={edit ? `${style.myPageModalContent}` : "none"}>
-          <p>Name</p>
-          <input type="text" placeholder="Jeon,Tae Hyeon" />
-          <p>Pronouns</p>
-          <div className={style.pronouns}>
-            <img src="/img/phone.png" alt="" />
-            <input type="text" placeholder="010-22-222" />
-          </div>
-          <div className={style.pronouns}>
-            <img src="/img/building.png" alt="" />
-            <input type="text" placeholder="서울시 송파구" />
-          </div>
-          <div className={style.myPageModalBtnBox}>
-            <button className={style.saveBtn}>save</button>
-            <button className={style.closeBtn}>close</button>
-          </div>
+    <div className={`modal-window ${className}`}>
+      <div className="x">
+        <div className="overlap-group">
+          <div className="rectangle" />
+          <div className="div" />
         </div>
       </div>
-    </>
+      <div className="kakao-login-button">
+        <div className="overlap-4">
+          <div className="text-wrapper-12">KAKAO로 로그인</div>
+        </div>
+      </div>
+      <div className="text-wrapper-13">LoveLove Shot 로그인하기</div>
+    </div>
   );
 }
 export default LoginModal;

@@ -1,9 +1,10 @@
 import React from "react";
+import "./modeSelect.css";
+import { Link } from "react-router-dom";
 import { Logo } from "../../component/logo/Logo";
 import { TabBar } from "../../component/tapbar/TabBar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCrown } from "@fortawesome/free-solid-svg-icons";
-import "./modeSelect.css";
 
 const ModeSelect = () => {
   return (
@@ -67,9 +68,11 @@ const ModeSelect = () => {
         <div className="standard-button">
           <div className="overlap-3">
             <div className="choose-button-2">
-              <div className="overlap-group-3">
-                <div className="text-wrapper-10">선택하기</div>
-              </div>
+              <Link to="/standard">
+                <div className="overlap-group-3">
+                  <div className="text-wrapper-10">선택하기</div>
+                </div>
+              </Link>
             </div>
             <p className="element">
               컨셉별 커플 이미지 1장

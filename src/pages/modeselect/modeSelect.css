@@ -1,4 +1,4 @@
-.index {
+.modeSelect-index {
   background-color: #ffffff;
   display: flex;
   flex-direction: row;
@@ -7,21 +7,21 @@
   height: 100vh;
 }
 
-.index .div-2 {
+.modeSelect-index .div-2 {
   background-color: #ffffff;
   height: 652px;
   position: relative;
   width: 400px;
 }
 
-.index .tab-bar-instance {
+.modeSelect-index .tab-bar-instance {
   left: 0 !important;
   position: fixed !important;
   /* top: 582px !important; */
   top: 90% !important;
 }
 
-.index .botton-text {
+.modeSelect-index .botton-text {
   height: 14px;
   left: 57px;
   position: absolute;
@@ -29,7 +29,7 @@
   width: 287px;
 }
 
-.index .p {
+.modeSelect-index .p {
   color: #565656;
   font-size: 12px;
   font-weight: 400;
@@ -45,7 +45,7 @@
     "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; */
 }
 
-.index .premium-button {
+.modeSelect-index .premium-button {
   height: 80px;
   left: 24px;
   position: absolute;
@@ -53,7 +53,7 @@
   width: 354px;
 }
 
-.index .overlap {
+.modeSelect-index .overlap {
   background-color: #ac59ff;
   border-radius: 8px;
   box-shadow: 0px 1.35px 13.5px #0000001a;
@@ -62,7 +62,7 @@
   width: 352px;
 }
 
-.index .choose-button {
+.modeSelect-index .choose-button {
   height: 22px;
   left: 259px;
   position: absolute;
@@ -70,7 +70,7 @@
   width: 83px;
 }
 
-.index .div-wrapper {
+.modeSelect-index .div-wrapper {
   background-color: #ffffff;
   border-radius: 33.08px;
   box-shadow: 0px 1.35px 1.35px #00000040;
@@ -79,7 +79,7 @@
   width: 81px;
 }
 
-.index .text-wrapper-4 {
+.modeSelect-index .text-wrapper-4 {
   color: #111111;
   font-family: "Pretendard-SemiBold", Helvetica;
   font-size: 10.8px;
@@ -91,7 +91,7 @@
   top: 4px;
 }
 
-.index .text {
+.modeSelect-index .text {
   height: 30px;
   left: 130px;
   position: absolute;
@@ -99,7 +99,7 @@
   width: 97px;
 }
 
-.index .text-wrapper-5 {
+.modeSelect-index .text-wrapper-5 {
   color: #ffffff;
   font-family: "Inter", Helvetica;
   font-size: 8px;
@@ -111,7 +111,7 @@
   top: 0;
 }
 
-.index .text-wrapper-6 {
+.modeSelect-index .text-wrapper-6 {
   color: #ffffff;
   font-family: "Inter", Helvetica;
   font-size: 8px;
@@ -123,7 +123,7 @@
   top: 20px;
 }
 
-.index .text-wrapper-7 {
+.modeSelect-index .text-wrapper-7 {
   color: #ffffff;
   font-family: "Inter", Helvetica;
   font-size: 8px;
@@ -135,25 +135,25 @@
   top: 10px;
 }
 
-.index .crown {
+.modeSelect-index .crown {
   left: -3px;
   position: absolute;
   top: -4px;
 }
 
-.index .crown-2 {
+.modeSelect-index .crown-2 {
   left: -3px;
   position: absolute;
   top: 9px;
 }
 
-.index .crown-3 {
+.modeSelect-index .crown-3 {
   left: -3px;
   position: absolute;
   top: 22px;
 }
 
-.index .text-wrapper-8 {
+.modeSelect-index .text-wrapper-8 {
   color: #ffffff;
   font-family: "Pretendard-SemiBold", Helvetica;
   font-size: 16px;
@@ -167,7 +167,7 @@
   white-space: nowrap;
 }
 
-.index .button-best {
+.modeSelect-index .button-best {
   height: 16px;
   left: 8px;
   position: absolute;
@@ -175,7 +175,7 @@
   width: 50px;
 }
 
-.index .overlap-2 {
+.modeSelect-index .overlap-2 {
   background-color: #5d00ba;
   border-radius: 33.08px;
   box-shadow: 0px 1.35px 1.35px #00000040;
@@ -184,7 +184,7 @@
   width: 48px;
 }
 
-.index .text-wrapper-9 {
+.modeSelect-index .text-wrapper-9 {
   color: #ffffff;
   font-family: "Pretendard-Bold", Helvetica;
   font-size: 8.1px;
@@ -196,7 +196,7 @@
   top: 3px;
 }
 
-.index .standard-button {
+.modeSelect-index .standard-button {
   height: 80px;
   left: 24px;
   position: absolute;
@@ -204,7 +204,7 @@
   width: 356px;
 }
 
-.index .overlap-3 {
+.modeSelect-index .overlap-3 {
   background-color: #ebebeb;
   border-radius: 8px;
   box-shadow: 0px 1.35px 13.5px #0000001a;
@@ -213,7 +213,7 @@
   width: 352px;
 }
 
-.index .choose-button-2 {
+.modeSelect-index .choose-button-2 {
   height: 22px;
   left: 263px;
   position: absolute;
@@ -221,7 +221,7 @@
   width: 79px;
 }
 
-.index .overlap-group-3 {
+.modeSelect-index .overlap-group-3 {
   background-color: #ffffff;
   border-radius: 33.07px;
   box-shadow: 0px 1.35px 1.35px #00000040;
@@ -230,7 +230,7 @@
   width: 77px;
 }
 
-.index .text-wrapper-10 {
+.modeSelect-index .text-wrapper-10 {
   color: #111111;
   font-family: "Pretendard-SemiBold", Helvetica;
   font-size: 10.8px;
@@ -243,7 +243,7 @@
   width: 39px;
 }
 
-.index .element {
+.modeSelect-index .element {
   color: #767676;
   font-family: "Inter", Helvetica;
   font-size: 8px;
@@ -257,7 +257,7 @@
   width: 99px;
 }
 
-.index .text-wrapper-11 {
+.modeSelect-index .text-wrapper-11 {
   color: #2d2d2d;
   font-family: "Pretendard-SemiBold", Helvetica;
   font-size: 16px;
@@ -270,7 +270,7 @@
   width: 68px;
 }
 
-.index .option-text {
+.modeSelect-index .option-text {
   height: 52px;
   left: 101px;
   position: absolute;
@@ -278,7 +278,7 @@
   width: 221px;
 }
 
-.index .text-wrapper-12 {
+.modeSelect-index .text-wrapper-12 {
   color: #000000;
   font-family: "Pretendard-Regular", Helvetica;
   font-size: 24px;
@@ -290,7 +290,7 @@
   top: 0;
 }
 
-.index .text-wrapper-13 {
+.modeSelect-index .text-wrapper-13 {
   color: #565656;
   font-family: "Pretendard-Regular", Helvetica;
   font-size: 16px;
@@ -304,7 +304,7 @@
   width: 217px;
 }
 
-.index .logo-instance {
+.modeSelect-index .logo-instance {
   left: 86px !important;
   position: absolute !important;
   top: 84px !important;

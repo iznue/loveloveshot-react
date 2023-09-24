@@ -1,4 +1,4 @@
-.index {
+.mainPage-index {
   background-color: #ffffff;
   display: flex;
   flex-direction: row;
@@ -6,18 +6,18 @@
   width: 100%;
 }
 
-.index .overlap-group-wrapper {
+.mainPage-index .overlap-group-wrapper {
   background-color: #ffffff;
   height: 652px;
   width: 400px;
 }
 
-.index .overlap-group {
+.mainPage-index .overlap-group {
   height: 618px;
   position: relative;
 }
 
-.index .image {
+.mainPage-index .image {
   height: 599px;
   left: 0;
   object-fit: cover;
@@ -26,7 +26,7 @@
   width: 400px;
 }
 
-.index .rectangle {
+.mainPage-index .rectangle {
   background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0) 0%,
@@ -40,18 +40,18 @@
   width: 400px;
 }
 
-.index .button-1 {
+.mainPage-index .button-1 {
   left: 60px !important;
   position: absolute !important;
   top: 508px !important;
 }
 
-.index .button-instance {
+.mainPage-index .button-instance {
   left: 67px !important;
   width: unset !important;
 }
 
-.index .text-top {
+.mainPage-index .text-top {
   height: 61px;
   left: 94px;
   position: absolute;
@@ -59,7 +59,7 @@
   width: 217px;
 }
 
-.index .text-wrapper-2 {
+.mainPage-index .text-wrapper-2 {
   color: #ffffff;
   font-family: "Pretendard-Regular", Helvetica;
   font-size: 24px;
@@ -71,7 +71,7 @@
   top: 0;
 }
 
-.index .AI {
+.mainPage-index .AI {
   color: #ffffff;
   font-family: "Pretendard-Regular", Helvetica;
   font-size: 12px;
@@ -84,18 +84,18 @@
   top: 33px;
 }
 
-.index .button-1-instance {
+.mainPage-index .button-1-instance {
   left: 60px !important;
   position: absolute !important;
   top: 571px !important;
 }
 
-.index .design-component-instance-node {
+.mainPage-index .design-component-instance-node {
   left: 95px !important;
   width: unset !important;
 }
 
-.index .view {
+.mainPage-index .view {
   left: 164px !important;
   position: absolute !important;
   top: 459px !important;

@@ -7,15 +7,7 @@ import { Link } from "react-router-dom";
 const MainPage = () => {
   return (
     <>
-      {/* <img src="background.gif" className="background" />
-      <div className="mainContainer">
-        <div className="btnBox main__btnBox">
-          <Link to="/modeSelect" className="btn main__btn">
-            사진 생성
-          </Link>
-        </div>
-      </div> */}
-      <div className="index">
+      <div className="mainPage-index">
         <div className="overlap-group-wrapper">
           <div className="overlap-group">
             <img

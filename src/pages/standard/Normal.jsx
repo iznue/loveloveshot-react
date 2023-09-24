@@ -3,9 +3,8 @@ import axios from "axios";
 // import { useNavigate } from "react-router-dom";
 // import { useDropzone } from "react-dropzone";
 // import ImageUpload from "../component/ImageUpload";
-import "./normalImage.css";
 
-const NormalImage = () => {
+const Normal = () => {
   const [disabled, setDisabled] = useState(false);
   const [maleImage, setMaleImage] = useState(null);
   const [femaleImage, setFemaleImage] = useState(null);
@@ -173,4 +172,4 @@ const NormalImage = () => {
     </>
   );
 };
-export default NormalImage;
+export default Normal;
