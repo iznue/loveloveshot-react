@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import "../assets/pages/normalImageResult.css";
 
-
 const NormalImageResult = () => {
   const location = useLocation();
   const [resultImage, setResultImage] = useState();
@@ -25,7 +24,7 @@ const NormalImageResult = () => {
 
   return (
     <div className="result__box">
-      <img src={resultImage} className="result_image" />
+      <img src={resultImage} alt="" className="result_image" />
     </div>
   );
 };

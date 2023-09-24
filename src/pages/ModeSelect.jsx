@@ -19,7 +19,7 @@ const ModeSelect = () => {
         <div class="card card1">
           <Link to="/normal">
             <div class="card_image">
-              <img src="standard.png" />
+              <img src="standard.png" alt="" />
             </div>
             <div class="card_title title-white">
               <p>Standard</p>
@@ -29,7 +29,10 @@ const ModeSelect = () => {
 
         <div class="card card2" onClick={checkLogin}>
           <div class="card_image">
-            <img src="https://media.giphy.com/media/10SvWCbt1ytWCc/giphy.gif" />
+            <img
+              src="https://media.giphy.com/media/10SvWCbt1ytWCc/giphy.gif"
+              alt=""
+            />
           </div>
           <div class="card_title title-white">
             <p>Premium</p>

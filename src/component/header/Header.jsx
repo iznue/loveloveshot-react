@@ -74,14 +74,14 @@ const Header = () => {
         display: ${(props) => (props.userToggleOpen ? "flex" : "none")};
         flex-direction: column;
         width: 100%;
-        background-color: #0E0E0D;
+        background-color: #0e0e0d;
       }
 
       .header_menulist {
         display: ${(props) => (props.isToggleOpen ? "flex" : "none")};
         flex-direction: column;
         width: 100%;
-        background-color: #0E0E0D;
+        background-color: #0e0e0d;
       }
 
       .header_menulist li,
@@ -120,7 +120,7 @@ const Header = () => {
       {/* Logo */}
       <div className="logo">
         <Link to="/">
-          <img src="loveloveshot_logo.png" id="main_logo" />
+          <img src="loveloveshot_logo.png" alt="" id="main_logo" />
         </Link>
       </div>
 

@@ -6,10 +6,11 @@ import NormalImage from "./pages/NormalImage";
 import NormalImageResult from "./pages/NormalImageResult";
 import PremiumImage from "./pages/PremiumImage";
 import NotFound from "./pages/NotFound";
-
+// import UseConnection from "./component/websocket/useConnection";
 function App() {
   return (
     <>
+      {/* <UseConnection /> */}
       <BrowserRouter>
         <Header />
         <Routes>
