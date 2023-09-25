@@ -1,18 +1,27 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import axios from "axios";
-// import { useNavigate } from "react-router-dom";
-// import { useDropzone } from "react-dropzone";
-// import ImageUpload from "../component/ImageUpload";
 import "../assets/pages/normalImage.css";
 
 const NormalImage = () => {
   const [disabled, setDisabled] = useState(false);
   const [maleImage, setMaleImage] = useState(null);
   const [femaleImage, setFemaleImage] = useState(null);
+  const [waitingCount, setWaitingCount] = useState(0);
+  const [count, setCount] = useState(0);
   const maleImgRef = useRef();
   const femaleImgRef = useRef();
-  // const navigate = useNavigate();
   const springURL = "http://192.168.0.159:8080/api/v1/uploadStandardImage";
+  let waitingNumber = 0;
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCount((prev) => prev + 1);
+    }, 1000);
+
+    return () => {
+      clearInterval(timer);
+    };
+  }, [waitingNumber]);
 
   const handleImageChange = (ref, setImageState) => {
     const file = ref.current.files[0];
@@ -57,21 +66,31 @@ const NormalImage = () => {
         .post(springURL, formdata)
         .then(function (resp) {
           console.log(resp);
-          console.log(resp.data.data.taskId);
+          waitingNumber = resp.data.data.waitingNumber;
+          setWaitingCount(waitingNumber);
           sessionStorage.setItem("taskId", resp.data.data.taskId);
-          // navigate("/normalResult", {
-          //   state: {
-          //     result: resp.data.data.aiImage,
-          //   },
-          // });
+          if (waitingNumber !== 0) {
+            alert(
+              "대기열: " +
+                waitingNumber +
+                "\n예상 대기 시간: " +
+                waitingNumber * 12 +
+                "초"
+            );
+          }
         })
         .catch(function (err) {
           alert(err);
         });
-      await new Promise((r) => setTimeout(r, 2000));
+      await new Promise((r) => setTimeout(r, 1000));
       setDisabled(false);
     }
   };
+
+  if (waitingNumber * 12 - count === 0) {
+    sessionStorage.clear(sessionStorage);
+  }
+
   return (
     <>
       <p>Standard</p>
@@ -151,7 +170,7 @@ const NormalImage = () => {
             <div className="normalImage_btnBox">
               <input
                 type="submit"
-                value="결과 보기"
+                value="업로드 하기"
                 className="btn normalImage__btn"
                 disabled={disabled}
               />
@@ -159,12 +178,27 @@ const NormalImage = () => {
           ) : (
             <div className="normalImage_btnBox">
               <input
-                type="submit"
+                type="button"
                 value="결과 보기"
                 className="btn normalImage__btn"
                 onClick={(event) => {
+                  let waitingTime = waitingCount * 12 - count;
                   event.preventDefault();
-                  alert("DLDLDLDL");
+                  if (waitingCount > 0 && waitingTime > 0) {
+                    alert(
+                      "이미 업로드를 하셨습니다.\n작업이 끝나고 다시 시도해 주세요.\n" +
+                        "대기열: " +
+                        waitingCount +
+                        "\n예상 대기 시간: " +
+                        waitingTime +
+                        "초"
+                    );
+                  }
+                  if (waitingTime <= 0) {
+                    alert(
+                      "사진 생성이 완료되었습니다!!\n결과는 사진첩에서 확인하실 수 있습니다."
+                    );
+                  }
                 }}
               />
             </div>
