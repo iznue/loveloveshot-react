@@ -1,0 +1,107 @@
+.tab-bar {
+  background-color: #ffffff;
+  box-shadow: 10px 10px 20px #00000033;
+  height: 70px;
+  position: relative;
+  width: 400px;
+}
+
+.tab-bar .group {
+  height: 38px;
+  left: 277px;
+  position: absolute;
+  top: 16px;
+  width: 26px;
+}
+
+.tab-bar .text-wrapper {
+  color: #b7b7b7;
+  font-family: "Pretendard-Regular", Helvetica;
+  font-size: 8px;
+  font-weight: 450;
+  left: -4px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 28px;
+  width: 30px;
+}
+
+.tab-bar .vector {
+  height: 24px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 24px;
+}
+
+.tab-bar .button {
+  background-color: #ffffff;
+  border-radius: 29.5px;
+  box-shadow: 0px 4px 30px #ac59ff1a;
+  height: 59px;
+  left: 170px;
+  position: absolute;
+  top: 4px;
+  width: 59px;
+}
+
+.tab-bar .overlap-group-wrapper {
+  height: 16px;
+  left: 23px;
+  position: relative;
+  top: 17px;
+  width: 16px;
+}
+
+.tab-bar .overlap-group {
+  height: 16px;
+  position: relative;
+}
+
+.tab-bar .rectangle {
+  background-color: #5d00ba;
+  height: 2px;
+  left: 0;
+  position: absolute;
+  top: 7px;
+  width: 16px;
+}
+
+.tab-bar .div {
+  background-color: #5d00ba;
+  height: 2px;
+  left: 0;
+  position: absolute;
+  top: 7px;
+  transform: rotate(90deg);
+  width: 16px;
+}
+
+.tab-bar .group-2 {
+  height: 38px;
+  left: 101px;
+  position: absolute;
+  top: 16px;
+  width: 25px;
+}
+
+.tab-bar .text-wrapper-2 {
+  color: #b7b7b7;
+  font-family: "Pretendard-Regular", Helvetica;
+  font-size: 8px;
+  font-weight: 400;
+  left: 6px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 28px;
+}
+
+.tab-bar .img {
+  height: 26px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 23px;
+}

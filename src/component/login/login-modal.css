@@ -1,0 +1,41 @@
+.modal-window {
+  background-color: #ffffff;
+  border-radius: 8px;
+  height: 232px;
+  width: 304px;
+}
+
+.modal-window .x {
+  height: 8px;
+  left: 288px;
+  position: relative;
+  top: 8px;
+  width: 8px;
+}
+
+.modal-window .overlap-group {
+  height: 8px;
+  position: relative;
+}
+
+.modal-window .rectangle {
+  background-color: #000000;
+  border-radius: 4px;
+  height: 10px;
+  left: 3px;
+  position: absolute;
+  top: -1px;
+  transform: rotate(-45deg);
+  width: 1px;
+}
+
+.modal-window .div {
+  background-color: #000000;
+  border-radius: 4px;
+  height: 10px;
+  left: 3px;
+  position: absolute;
+  top: -1px;
+  transform: rotate(-135deg);
+  width: 1px;
+}

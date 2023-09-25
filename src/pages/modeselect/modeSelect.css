@@ -1,0 +1,312 @@
+.modeSelect-index {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.modeSelect-index .div-2 {
+  background-color: #ffffff;
+  height: 652px;
+  position: relative;
+  width: 400px;
+}
+
+.modeSelect-index .tab-bar-instance {
+  left: 0 !important;
+  position: fixed !important;
+  /* top: 582px !important; */
+  top: 90% !important;
+}
+
+.modeSelect-index .botton-text {
+  height: 14px;
+  left: 35px;
+  position: absolute;
+  top: 536px;
+  width: 287px;
+}
+
+.modeSelect-index .p {
+  color: #565656;
+  font-size: 12px;
+  font-weight: 400;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+  /* font-family: "Pretendard Variable", Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
+    "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; */
+}
+
+.modeSelect-index .premium-button {
+  height: 80px;
+  left: 24px;
+  position: absolute;
+  top: 344px;
+  width: 354px;
+}
+
+.modeSelect-index .overlap {
+  background-color: #ac59ff;
+  border-radius: 8px;
+  box-shadow: 0px 1.35px 13.5px #0000001a;
+  height: 80px;
+  position: relative;
+  width: 352px;
+}
+
+.modeSelect-index .choose-button {
+  height: 22px;
+  left: 259px;
+  position: absolute;
+  top: 30px;
+  width: 83px;
+}
+
+.modeSelect-index .div-wrapper {
+  background-color: #ffffff;
+  border-radius: 33.08px;
+  box-shadow: 0px 1.35px 1.35px #00000040;
+  height: 22px;
+  position: relative;
+  width: 81px;
+}
+
+.modeSelect-index .text-wrapper-4 {
+  color: #111111;
+  font-family: "Pretendard-SemiBold", Helvetica;
+  font-size: 10.8px;
+  font-weight: 600;
+  left: 18px; /*23px;*/
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 4px;
+}
+
+.modeSelect-index .text {
+  height: 30px;
+  left: 130px;
+  position: absolute;
+  top: 25px;
+  width: 97px;
+}
+
+.modeSelect-index .text-wrapper-5 {
+  color: #ffffff;
+  font-family: "Inter", Helvetica;
+  font-size: 8px;
+  font-weight: 400;
+  left: 7px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: -8px;
+  width: 110px;
+}
+
+.modeSelect-index .text-wrapper-6 {
+  color: #ffffff;
+  font-family: "Inter", Helvetica;
+  font-size: 8px;
+  font-weight: 400;
+  left: 7px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 8px;
+}
+
+.modeSelect-index .text-wrapper-7 {
+  color: #ffffff;
+  font-family: "Inter", Helvetica;
+  font-size: 8px;
+  font-weight: 400;
+  left: 7px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 24px;
+}
+
+.modeSelect-index .crown {
+  left: -8px;
+  position: absolute;
+  top: -13px;
+}
+
+.modeSelect-index .crown-2 {
+  left: -8px;
+  position: absolute;
+  top: 3px;
+}
+
+.modeSelect-index .crown-3 {
+  left: -8px;
+  position: absolute;
+  top: 19px;
+}
+
+.modeSelect-index .text-wrapper-8 {
+  color: #ffffff;
+  font-family: "Pretendard-SemiBold", Helvetica;
+  font-size: 16px;
+  font-weight: 600;
+  height: 19px;
+  left: 29px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 31px;
+  white-space: nowrap;
+}
+
+.modeSelect-index .button-best {
+  height: 16px;
+  left: 8px;
+  position: absolute;
+  top: 4px;
+  width: 50px;
+}
+
+.modeSelect-index .overlap-2 {
+  background-color: #5d00ba;
+  border-radius: 33.08px;
+  box-shadow: 0px 1.35px 1.35px #00000040;
+  height: 16px;
+  position: relative;
+  width: 48px;
+}
+
+.modeSelect-index .text-wrapper-9 {
+  color: #ffffff;
+  font-family: "Pretendard-Bold", Helvetica;
+  font-size: 8.1px;
+  font-weight: 700;
+  left: 12px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 3px;
+}
+
+.modeSelect-index .standard-button {
+  height: 80px;
+  left: 24px;
+  position: absolute;
+  top: 240px;
+  width: 356px;
+}
+
+.modeSelect-index .overlap-3 {
+  background-color: #ebebeb;
+  border-radius: 8px;
+  box-shadow: 0px 1.35px 13.5px #0000001a;
+  height: 80px;
+  position: relative;
+  width: 352px;
+}
+
+.modeSelect-index .choose-button-2 {
+  height: 22px;
+  left: 263px;
+  position: absolute;
+  top: 29px;
+  width: 79px;
+}
+
+.modeSelect-index .overlap-group-3 {
+  background-color: #ffffff;
+  border-radius: 33.07px;
+  box-shadow: 0px 1.35px 1.35px #00000040;
+  height: 22px;
+  position: relative;
+  width: 77px;
+}
+
+.modeSelect-index .text-wrapper-10 {
+  color: #111111;
+  font-family: "Pretendard-SemiBold", Helvetica;
+  font-size: 10.8px;
+  font-weight: 600;
+  left: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 4px;
+  /*width: 39px;*/
+}
+
+.modeSelect-index .element {
+  color: #767676;
+  font-family: "Inter", Helvetica;
+  font-size: 8px;
+  font-weight: 400;
+  left: 120px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 19px;
+  width: 117px;
+}
+
+.modeSelect-index .text-wrapper-11 {
+  color: #2d2d2d;
+  font-family: "Pretendard-SemiBold", Helvetica;
+  font-size: 16px;
+  font-weight: 600;
+  left: 25px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 31px;
+  width: 68px;
+}
+
+.modeSelect-index .option-text {
+  height: 52px;
+  left: 82px; /*101px;*/ 
+  position: absolute;
+  top: 130px;
+  width: 221px;
+}
+
+.modeSelect-index .text-wrapper-12 {
+  color: #000000;
+  font-family: "Pretendard-Regular", Helvetica;
+  font-size: 24px;
+  font-weight: 400;
+  left: 43px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 0;
+}
+
+.modeSelect-index .text-wrapper-13 {
+  color: #565656;
+  font-family: "Pretendard-Regular", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 33px;
+  white-space: nowrap;
+  width: 217px;
+}
+
+.modeSelect-index .logo-instance {
+  left: 86px !important;
+  position: absolute !important;
+  top: 84px !important;
+}
